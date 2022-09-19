@@ -1,0 +1,215 @@
+/* Global */
+
+body {
+  background-color: #f0eff0;
+}
+
+body > div {
+  height: 100px;
+  background-color: #075e54;
+}
+
+main {
+  min-width: 1100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+h2,
+p {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+p,
+span {
+  font-size: 1rem;
+}
+
+i {
+  color: #b1b1b1;
+  font-size: 1.4rem;
+}
+
+/* Classes */
+
+.left-section,
+.right-section {
+  height: 900px;
+}
+
+.user-header,
+.contact-header {
+  background-color: #eaeaea;
+}
+
+/* Classes - Left Section */
+
+.left-section {
+  border-right: 1px solid #d6d6d6;
+  background-color: white;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.notifications {
+  background-color: #8edafc;
+}
+
+.notifications .icon {
+  background-color: white;
+}
+
+.notifications .icon i {
+  color: #8edafc;
+}
+
+.notifications p.title {
+  font-size: 1.1rem;
+}
+
+.notifications p.subtitle {
+  color: #748485;
+  text-decoration: underline;
+}
+
+.search-box {
+  background-color: #eaeaea;
+}
+
+.search-box div {
+  background-color: white;
+}
+
+.search-box i {
+  font-size: 1rem;
+}
+
+.search-box input {
+  border: transparent;
+}
+
+.chats {
+  background-color: white;
+  overflow-y: auto;
+}
+
+.chat:hover {
+  background-color: #e9ebeb;
+  cursor: pointer;
+}
+
+.chat.active {
+  background-color: #f4f4f4;
+}
+
+.chat p,
+.chat span {
+  color: #bdbebf;
+  font-size: 0.9rem;
+}
+
+/* Classes - Right Section */
+
+.contact-header p {
+  font-size: 0.8rem;
+  color: #6b7376;
+}
+
+.contact-header div.active {
+  display: flex !important;
+}
+
+.chat-text {
+  background-image: url(../img/mine.jpg);
+  overflow-y: auto;
+}
+
+.chat-text .active {
+  display: flex !important;
+}
+
+.chat-text div.message {
+  position: relative;
+  width: 45%;
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.chat-text div.message span {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 10px;
+  color: darkgray;
+  z-index: 1;
+}
+
+.chat-text div.message.user-message {
+  align-self: flex-end;
+  background-color: #d5f9ba;
+}
+
+.chat-text div.message.contact-message {
+}
+
+.chat-text div.message i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1rem;
+}
+
+.chat-text div.message i:hover {
+  cursor: pointer;
+}
+
+.chat-text div.message i + div {
+  display: none;
+}
+
+.chat-text div.message i + div p {
+  padding: 0.7rem;
+}
+
+.chat-text div.message i + div p:hover {
+  background-color: #f4f4f4;
+}
+
+.chat-text div.message i:hover + div,
+.chat-text div.message i + div:hover {
+  display: block;
+  position: absolute;
+  top: 1.3rem;
+  right: 0;
+  background-color: white;
+  color: #6b7376;
+  z-index: 2;
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
+.user-input i {
+  color: #6b7376;
+}
+
+.user-input input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+}

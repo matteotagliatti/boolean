@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue-Boolzapp</title>
+
+    <!-- Vue CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/d52bda3773.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Day.js CDN -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div></div>
+    <main class="container my-4" id="app">
+      <div class="row">
+        <!-- Left Section -->
+        <div class="left-section col-4 px-0">
+          <!-- User Header -->
+          <div
+            class="d-flex user-header justify-content-between align-items-center p-3"
+          >
+            <!-- User -->
+            <div class="d-flex gap-2 align-items-center">
+              <img class="icon" src="img/avatar_io.jpg" alt="user icon" />
+              <h2>Sofia</h2>
+            </div>
+            <!-- Icons -->
+            <div class="d-flex gap-4 align-items-center">
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <!-- Notifications -->
+          <div class="notifications p-3 d-flex gap-2">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            <div>
+              <p class="title">Ricevi notifiche di nuovi messaggi</p>
+              <p class="subtitle">Attiva notifiche desktop</p>
+            </div>
+          </div>
+          <!-- Search Box -->
+          <div class="search-box p-2">
+            <div class="d-flex align-items-center gap-2 px-3 py-1">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                class="w-100"
+                type="text"
+                name=""
+                id=""
+                placeholder="Cerca o inizia una nuova chat"
+                v-model="search"
+              />
+            </div>
+          </div>
+          <!-- Chats -->
+          <div class="chats">
+            <!-- Single Chat -->
+            <div
+              class="chat d-flex p-3 justify-content-between"
+              v-for="(chat, index) in contacts"
+              :class=" [(index === activeChat) ? 'active' : '', (searchContains(index)) ? '' : 'd-none'] "
+              @keydown="searchContains(index)"
+              @click="changeChat(index)"
+            >
+              <!-- Left -->
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  class="icon"
+                  :src="`img/avatar${chat.avatar}.jpg`"
+                  alt=""
+                />
+                <div>
+                  <h2>{{ chat.name }}</h2>
+                  <p>Ultimo messaggio inviato</p>
+                </div>
+              </div>
+              <!-- Right -->
+              <span
+                >{{ getDate(chat.messages[chat.messages.length - 1].date)
+                }}</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Right Section -->
+        <div
+          class="right-section col-8 px-0 d-flex flex-column justify-content-between"
+        >
+          <!-- Contanct Header -->
+          <div
+            class="d-flex contact-header justify-content-between align-items-center p-3"
+          >
+            <!-- User -->
+            <div
+              v-for="(user, index) in contacts"
+              class="gap-2 align-items-center d-none"
+              :class="(index === activeChat) ? 'active' : '' "
+            >
+              <img
+                class="icon"
+                :src="`img/avatar${user.avatar}.jpg`"
+                alt="user icon"
+              />
+              <div>
+                <h2>{{ user.name }}</h2>
+                <p>
+                  Ultimo accesso alle {{
+                  getDate(user.messages[user.messages.length - 1].date) }}
+                </p>
+              </div>
+            </div>
+            <!-- Icons -->
+            <div class="d-flex gap-4 align-items-center">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <!-- Chat -->
+          <div class="chat-text flex-grow-1 p-4">
+            <div
+              class="d-none flex-column"
+              v-for="(chat, index) in contacts"
+              :class="(index === activeChat) ? 'active' : '' "
+            >
+              <!-- Single Message -->
+              <div
+                class="message"
+                v-for="(text, index) in chat.messages"
+                :class="(text.status === 'sent') ? 'user-message' : 'contact-message' "
+              >
+                <p>{{ text.message }}</p>
+                <span>{{ getDate(text.date) }}</span>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div>
+                  <p>Informazioni</p>
+                  <p class="hover-pointer" @click="deleteMessage(index)">
+                    Cancella il messaggio
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- User Input -->
+          <div
+            class="user-input d-flex justify-content-between align-items-center"
+          >
+            <i class="fa-solid fa-face-smile py-4 px-5"></i>
+            <input
+              class="p-2"
+              type="text"
+              name=""
+              id=""
+              placeholder="Scrivi un messaggio"
+              v-model="message"
+              @keydown.enter="sendMessage(activeChat)"
+            />
+            <i class="fa-solid fa-microphone py-4 px-5"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

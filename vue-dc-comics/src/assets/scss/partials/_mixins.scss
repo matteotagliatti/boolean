@@ -1,0 +1,16 @@
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin base-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+@mixin object-fit-top {
+  object-fit: cover;
+  object-position: top;
+}
