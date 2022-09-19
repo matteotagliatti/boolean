@@ -1,0 +1,580 @@
+/* Import  */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* Variables */
+
+:root {
+  --green: #c0ff31;
+  --grey: #a3a3a3;
+}
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global */
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--grey);
+}
+
+h1,
+h3,
+i {
+  color: white;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  transition: 0.5s;
+}
+
+h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  height: calc(100vh - 80px);
+  display: flex;
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* General - Main Nav */
+
+main nav {
+  min-width: 200px;
+  padding-top: 1rem;
+  background-color: black;
+  z-index: 2;
+}
+
+main nav ul li {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0;
+  transition: 0.5s;
+}
+
+main nav ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+main nav ul li:hover img {
+  opacity: 1;
+}
+
+main nav ul li img {
+  height: 23px;
+  margin: 0 0.4rem 0 1rem;
+  opacity: 0.8;
+}
+
+main nav hr {
+  margin: 0.8rem 0 1rem 0;
+}
+
+main nav span {
+  transition: 0.5s;
+}
+
+main nav span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+main nav #create-playlist {
+  transition: 0.5s;
+}
+
+main nav span:hover #create-playlist {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* General - Content */
+
+#content > div > div {
+  margin-bottom: 4rem;
+}
+
+/* General - Footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 1rem;
+  background-color: #282828;
+  z-index: 3;
+}
+
+footer i {
+  margin-right: 1rem;
+}
+
+/* Classes */
+
+.container {
+  padding: 0 2rem;
+}
+
+.only-xs {
+  display: none;
+}
+
+/* Classes - Flex */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-bet {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* Classes - Main Nav */
+
+main nav .container {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+main nav .logo {
+  height: 45px;
+}
+
+main nav .logo-small {
+  height: 25px;
+}
+
+main nav .no-padding {
+  padding: 0;
+}
+
+main nav .overflow {
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+main nav ul .active {
+  border-left: 2px solid var(--green);
+  font-weight: 600;
+}
+
+main nav div.bottom-nav img {
+  margin: 0 0.4rem 0 0rem;
+}
+
+main nav div.bottom-nav span.profile-text {
+  font-weight: 700;
+  color: white;
+}
+
+/* Classes - Content Nav */
+
+.content-nav {
+  margin: 8.5rem 0 4rem 0;
+}
+
+.content-nav ul {
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-transform: uppercase;
+}
+
+.content-nav ul li {
+  transition: 0.5s;
+}
+
+.content-nav ul li:hover {
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.content-nav ul li.active::after {
+  content: "";
+  width: 30px;
+  padding-top: 4px;
+  border-bottom: 2px solid var(--green);
+}
+
+/* Classes - Content Elements */
+
+.section-title {
+  margin-bottom: 2rem;
+}
+
+.elements-container {
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.element {
+  width: calc((100% / 7) + 10px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.element img {
+  width: 100%;
+}
+
+.element .img-container {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.element .img-overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.img-container:hover {
+  cursor: pointer;
+}
+
+.img-container:hover .img-overlay {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.img-container:hover .img-overlay {
+  font-size: 4rem;
+}
+
+.element .title {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.pop-artists img {
+  border-radius: 50%;
+}
+
+/* Classes - Footer */
+
+footer .progress-bar {
+  height: 5px;
+  width: 80%;
+  border-radius: 3px;
+  background-color: var(--grey);
+}
+
+footer .progress-bar .inner {
+  height: 5px;
+  width: 20%;
+  border-radius: 3px;
+  background-color: lightgray;
+  position: relative;
+}
+
+footer .progress-bar:hover {
+  cursor: pointer;
+}
+
+footer .progress-bar:hover .inner {
+  background-color: var(--green);
+}
+
+.inner-dot {
+  display: none;
+}
+
+footer .progress-bar:hover .inner-dot {
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.footer-left .icons i,
+.footer-right .icons i {
+  color: var(--grey);
+}
+
+.footer-left .icons i:hover,
+.footer-right .icons i:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* Classes - Footer Left */
+
+.footer-left {
+  gap: 1rem;
+}
+
+.footer-left div:nth-child(3) {
+  margin-left: 1.3rem;
+}
+
+.footer-left img.play {
+  height: 40px;
+}
+
+.footer-left .title {
+  font-weight: 700;
+  color: white;
+}
+
+.footer-left .author {
+  font-size: 0.8rem;
+  color: var(--grey);
+}
+
+.footer-left .author:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
+
+/* Classes - Footer Middle */
+
+.footer-middle {
+  flex-basis: 500px;
+}
+
+.footer-middle > div:first-child {
+  margin-bottom: 0.8rem;
+}
+
+.footer-middle i {
+  font-size: 1.5rem;
+}
+
+.footer-middle i.big {
+  font-size: 1.7rem;
+  transition: 0.5s;
+}
+
+.footer-middle i.big:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.footer-middle .progress-bar-container {
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Classes - Footer Right */
+
+.footer-right .progress-bar-container {
+  width: 130px;
+}
+
+.footer-right .progress-bar {
+  width: 100%;
+}
+
+/* ID */
+
+#content {
+  width: 100%;
+  background-color: #141922;
+  overflow: auto;
+}
+
+/* ID - Main Nav */
+
+main nav #create-playlist {
+  margin: 0 0.5rem 0.7rem 0;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  color: black;
+  background-color: var(--grey);
+}
+
+main nav img#download-icon {
+  width: 15px;
+  height: 15px;
+}
+
+main nav img#profile-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--grey);
+}
+
+/* ID - Content Upgrade */
+
+#upgrade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  padding-right: 1rem;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+#upgrade-btn {
+  padding: 0.7rem 2rem;
+  border: 1px solid white;
+  border-radius: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+#upgrade-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Breakpoint MB */
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .elements-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .element {
+    width: calc((90% / 4) + 2px);
+  }
+
+  .footer-middle {
+    margin: 0 1rem;
+    min-width: 195px;
+  }
+}
+
+/* Breakpoint S */
+
+@media screen and (max-width: 767px) {
+  .element {
+    width: calc((100% / 2) - 8px);
+  }
+
+  footer i {
+    margin-right: 0.5rem;
+  }
+
+  .footer-middle .progress-bar-container {
+    max-width: 340px;
+  }
+
+  .footer-left div:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .footer-right .progress-bar-container {
+    width: 60px;
+  }
+}
+
+/* Breakpoint XS */
+
+@media screen and (max-width: 576px) {
+  main nav .container {
+    padding: 0 1rem;
+    margin-bottom: 0;
+  }
+
+  main nav {
+    min-width: unset;
+    align-items: center;
+  }
+
+  main nav .logo-small {
+    margin-bottom: 1rem;
+  }
+
+  main nav .no-padding {
+    padding: 0 1rem;
+  }
+
+  main nav .bottom-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main nav ul li img {
+    margin: 0;
+  }
+
+  main nav img#profile-icon {
+    margin-right: unset;
+  }
+
+  main nav div.bottom-nav img {
+    margin-bottom: 1em;
+    margin-right: 0;
+  }
+
+  .xs-none {
+    display: none;
+  }
+
+  .only-xs {
+    display: block;
+  }
+
+  main nav ul .active {
+    border-left: none;
+  }
+}

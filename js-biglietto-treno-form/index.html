@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Biglietto Treno Form</title>
+
+    <!-- TailwindCSS script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main
+      class="h-screen bg-red-800 py-5 flex flex-col items-center justify-center"
+    >
+      <!-- First Section -->
+      <div class="mb-9 text-center">
+        <!-- Title -->
+        <h1 class="text-white uppercase font-semibold text-xl mb-3">
+          Calcola il prezzo del tuo biglietto
+        </h1>
+        <!-- First Section -->
+        <section
+          class="bg-white rounded py-5 px-5 md:px-10 flex flex-col items-center gap-8"
+        >
+          <!-- Input -->
+          <div class="flex gap-3 md:gap-10">
+            <div>
+              <h2 class="text-red-800 font-semibold mb-2">Nome Cognome</h2>
+              <input
+                class="border-2 border-red-800 rounded text-center"
+                type="text"
+                name=""
+                id="nome-cognome"
+                placeholder="Nome Cognome"
+              />
+            </div>
+            <div>
+              <h2 class="text-red-800 font-semibold mb-2">Km da percorrere</h2>
+              <input
+                class="border-2 border-red-800 rounded text-center"
+                type="number"
+                name=""
+                id="km"
+                placeholder="Km da percorrere"
+              />
+            </div>
+            <div>
+              <h2 class="text-red-800 font-semibold mb-2">Fascia d'età</h2>
+              <select
+                class="border-2 border-red-800 rounded text-center bg-white"
+                name=""
+                id="eta"
+              >
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="minorenne">Minorenne</option>
+                <option value="over">Oltre i 65</option>
+              </select>
+            </div>
+          </div>
+          <!-- Buttons -->
+          <div class="flex gap-3">
+            <button
+              id="genera"
+              class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
+            >
+              Genera
+            </button>
+            <button
+              id="annulla"
+              class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
+            >
+              Annulla
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Second Section -->
+      <div id="second-section" class="hidden">
+        <h1 class="text-white text-center uppercase font-semibold text-xl mb-3">
+          Il tuo biglietto
+        </h1>
+        <section
+          class="bg-white rounded py-5 px-5 md:px-10 flex flex-col items-center"
+        >
+          <h2 class="uppercase font-semibold mb-1 self-start">
+            Dettaglio passeggeri
+          </h2>
+          <div class="flex border-2 border-netrual-400">
+            <div class="w-1/4 bg-slate-500 p-5">
+              <h3 class="uppercase font-semibold text-lg">Nome passeggero</h3>
+              <p id="nome-passeggero" class="text-white"></p>
+            </div>
+            <div class="w-3/4 flex">
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Offerta</p>
+                <small id="messaggio"></small>
+                <p id="biglietto"></p>
+              </div>
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Carrozza</p>
+                <p id="carrozza"></p>
+              </div>
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Codice CP</p>
+                <p id="codice-cp"></p>
+              </div>
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Costo Biglietto</p>
+                <p><span id="costo-biglietto"></span> €</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

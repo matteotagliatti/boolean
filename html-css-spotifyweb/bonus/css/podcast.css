@@ -1,0 +1,26 @@
+.element {
+  padding: 1rem 1rem 2.3rem 1rem;
+  background-color: #282828;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.5s;
+}
+
+.element:hover {
+  background-color: #4e4e4e;
+  cursor: pointer;
+}
+
+.element img,
+.element .img-container,
+.img-overlay {
+  border-radius: 15px;
+}
+
+.element img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.element .img-overlay {
+  bottom: 4px;
+}

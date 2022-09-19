@@ -1,0 +1,22 @@
+:root {
+  --size: 50px;
+}
+
+.container {
+  width: calc(var(--size) * 12);
+  margin-bottom: 2rem;
+}
+
+[class*="col-"] {
+  height: var(--size);
+  max-width: var(--size);
+  border: 1px solid white;
+}
+
+[class*="col-"].black {
+  background-color: black;
+}
+
+[class*="col-"].red {
+  background-color: red;
+}

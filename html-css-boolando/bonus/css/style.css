@@ -1,0 +1,175 @@
+/* Reset */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global */
+
+body {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+p, span {
+    font-size: 14px;
+}
+
+/* Classes */
+
+.container {
+    max-width: 1150px;
+    margin: 30px auto;
+}
+
+.row {
+    margin-bottom: 60px;
+}
+
+.product {
+    display: inline-block;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.img-container {
+    margin-bottom: 10px;
+    width: 300px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+}
+
+.img-container .second-img {
+    display: none;
+}
+
+.img-container:hover .first-img {
+    display: none;
+}
+
+.img-container:hover .second-img {
+    display: inline-block;
+}
+
+.p-f {
+    padding: 4px 5px;
+    font-size: 13px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.b-30 {
+    bottom: 30px;
+}
+
+.discount {
+    background-color: #eb002c;
+}
+
+.sustainability {
+    left: 45px;
+    background-color: #008354;
+}
+
+.l0 {
+    left: 0;
+}
+
+.heart-container {
+    display: none;
+    top: 20px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    box-shadow: -3px -3px 5px #dadada;
+}
+
+.heart {
+    color: black;
+    font-size: 25px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.brand {
+    text-transform: capitalize;
+}
+
+.name-product {
+    text-transform: uppercase;
+}
+
+.price {
+    color: red;
+}
+
+.price-stroke {
+    color:darkslategrey;
+    text-decoration: line-through;
+}
+
+/* Bonus */
+
+.img-container:hover .heart-container {
+    display: block;
+}
+
+.img-container:hover {
+    cursor: pointer;
+}
+
+.img-container:active .heart {
+    color: red;
+}
+
+.product {
+    background-color: #3a148b;
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.p20, img {
+    border-radius: 10px;
+}
+
+img {
+    box-shadow: 7px 7px 0px white;
+}
+
+.img-container:hover img {
+    box-shadow: 7px 7px 0px red;
+}
+
+
+
+.brand,
+.name-product {
+    color: white;
+}
+
+.price-stroke {
+    color: lightgray;
+}

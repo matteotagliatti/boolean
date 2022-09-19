@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML CSS SpotifyWeb</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Nav -->
+      <nav class="flex flex-col justify-bet">
+        <!-- Top Nav -->
+        <div>
+          <!-- Logo -->
+          <div class="container">
+            <img class="logo xs-none" src="img/logo.svg" alt="logo" />
+            <img
+              src="img/logo-small.svg"
+              alt="logo small"
+              class="logo-small only-xs"
+            />
+          </div>
+
+          <!-- Home + Search + Library -->
+          <div class="container no-padding">
+            <ul>
+              <li class="flex align-center active">
+                <img src="img/home.svg" alt="home icon" />
+                <span class="xs-none">Home</span>
+              </li>
+              <li class="flex align-center">
+                <img src="img/search.svg" alt="search icon" />
+                <span class="xs-none">Cerca</span>
+              </li>
+              <li class="flex align-center">
+                <img src="img/libreria.svg" alt="library icon" />
+                <span class="xs-none">La tua libreria</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Playlist -->
+          <div class="container xs-none">
+            <h3>Playlist</h3>
+            <span><button id="create-playlist">+</button> Crea Playlist</span>
+            <ul class="overflow">
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="bottom-nav container no-margin-bottom">
+          <p class="flex align-center">
+            <img
+              id="download-icon"
+              src="img/download.svg"
+              alt="download icon"
+            />
+            <span class="xs-none">Installa App</span>
+          </p>
+          <hr class="xs-none" />
+
+          <p class="flex align-center">
+            <img id="profile-icon" src="img/profile.svg" alt="profile icon" />
+            <span class="xs-none profile-text">John Doe</span>
+          </p>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div id="content">
+        <!-- Upgrade -->
+        <div id="upgrade" class="flex align-center">
+          <a href="#" id="upgrade-btn">Effettua l'upgrade</a>
+        </div>
+
+        <!-- Content Nav -->
+        <div class="container content-nav">
+          <ul class="flex justify-center">
+            <li class="flex flex-col align-center active">In evidenza</li>
+            <li>Podcast</li>
+            <li>Classifiche</li>
+            <li>Generi e mood</li>
+            <li>Nuove uscite</li>
+            <li>Scopri</li>
+          </ul>
+        </div>
+
+        <!-- Content Playlist -->
+        <div class="container">
+          <!-- Recently Played -->
+          <div>
+            <div class="section-title">
+              <h1>Recently Played</h1>
+            </div>
+
+            <div class="flex elements-container">
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/metal_lifting.jpg" alt="heavy emtal playlist" />
+                </div>
+                <span class="title">Heavy Metal</span>
+                <span class="artist">Subtitle</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/stranger.jpeg" alt="stranger things playlist" />
+                </div>
+                <span class="title"
+                  >Stranger Things, Vol. 1 (a Netflix Original Series
+                  Soundtrack)</span
+                >
+                <span class="artist">Kyle Dixon & Micheal Stein</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img
+                    src="img/aquietplace.jpeg"
+                    alt="a quiet place playlist"
+                  />
+                </div>
+                <span class="title">A quiet place</span>
+                <span class="artist">Subtitle</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/split.jpeg" alt="split" />
+                </div>
+                <span class="title">Split</span>
+                <span class="artist">Subtitle</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/cure.jpeg" alt="a cure for wellness playlist" />
+                </div>
+                <span class="title">A cure for wellness</span>
+                <span class="artist">Subtitle</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/sinister.jpeg" alt="sinister playlist" />
+                </div>
+                <span class="title">Sinister</span>
+                <span class="artist">Subtitle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Create for yuu -->
+          <div>
+            <div class="section-title">
+              <h1>Creato per John Doe</h1>
+              <span>Più ascoliti, più accurati saranno i suggerimenti</span>
+            </div>
+            <div class="flex elements-container">
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/radar.jpeg" alt="radar playlist" />
+                </div>
+                <span class="title">Release Radar</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/mixdaily.jpeg" alt="daily mix playlist" />
+                </div>
+                <span class="title">Daily Mix</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Artists -->
+          <div class="pop-artists">
+            <div class="section-title">
+              <h1>Artisti più popolari</h1>
+              <span>Più ascoliti, più accurati saranno i suggerimenti</span>
+            </div>
+            <div class="flex elements-container">
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/youg.jpeg" alt="lana del rey" />
+                </div>
+                <span class="title">Lana del Rey</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/einaudi.jpeg" alt="einaudi" />
+                </div>
+                <span class="title">Ludovico Einaudi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex justify-bet align-center">
+      <!-- Left -->
+      <div class="flex justify-center align-center footer-left">
+        <div>
+          <img class="play" src="img/player_left.jpg" alt="playing" />
+        </div>
+        <div class="flex flex-col">
+          <span class="title">Sinister</span>
+          <span class="author">Subtitle</span>
+        </div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="far fa-folder"></i>
+        </div>
+      </div>
+      <!-- Middle -->
+      <div class="flex flex-col align-center footer-middle">
+        <div>
+          <i class="fas fa-random"></i>
+          <i class="fas fa-step-backward"></i>
+          <i class="far fa-play-circle big"></i>
+          <i class="fas fa-step-forward"></i>
+          <i class="fas fa-redo-alt"></i>
+        </div>
+        <div class="progress-bar-container flex justify-center align-center">
+          <span>0:25</span>
+          <div class="progress-bar">
+            <div class="inner">
+              <div class="inner-dot"></div>
+            </div>
+          </div>
+          <span>4:45</span>
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="footer-right flex align-center">
+        <div class="icons flex">
+          <i class="fas fa-list"></i>
+          <i class="fas fa-tv"></i>
+          <i class="fas fa-volume-up"></i>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar">
+            <div class="inner">
+              <div class="inner-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

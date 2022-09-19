@@ -1,0 +1,533 @@
+/* Import */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
+
+/* Variables */
+
+:root {
+  --light-blue: #b4d0e7;
+  --blue: #0061ff;
+  --base-border: 1px solid grey;
+}
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  line-height: 80px;
+  background-color: white;
+  z-index: 1;
+}
+
+footer {
+  color: white;
+  background-color: black;
+}
+
+footer hr {
+  width: 100px;
+}
+
+footer span,
+footer i {
+  opacity: 0.9;
+  margin-right: 7px;
+}
+
+main img {
+  width: 100%;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+hr {
+  color: grey;
+  opacity: 0.8;
+}
+
+/* Global - Font */
+
+h1 {
+  font-size: 4.2rem;
+}
+
+#jumbo h1 {
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+footer h4 {
+  margin-bottom: 1.5rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h4,
+h5 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+/* Global - a */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+#jumbo a i {
+  color: black;
+}
+
+/* Global - li */
+
+li {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+header nav ul li:hover {
+  cursor: pointer;
+}
+
+main ul {
+  margin-left: 1.2rem;
+}
+
+main ul li {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-indent: -9px;
+}
+
+footer ul li {
+  margin-bottom: 0.8rem;
+  opacity: 0.9;
+}
+
+footer ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* General - Teams, Logos */
+
+#logos-review > div {
+  height: 40vh;
+}
+
+#logos-review hr {
+  width: 50px;
+}
+
+.logos img {
+  width: 50%;
+  margin: auto; /* Position elements at center */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(0) invert(1); /* Images to white */
+}
+
+.logos div {
+  height: 50%;
+}
+
+/* Classes - Containers */
+
+.container {
+  width: 65%;
+  max-width: 1000px;
+  min-width: 930px;
+  margin: 0 auto;
+}
+
+header .container {
+  width: 95%;
+  max-width: 1800px;
+  min-width: 1050px;
+}
+
+#jumbo .container,
+footer .container {
+  width: 80%;
+  max-width: 1300px;
+}
+
+#jumbo .img-container {
+  top: 0;
+  right: 0;
+}
+
+/* Classes - Display */
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+/* Classes - Vertical Align */
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.vertical-top {
+  vertical-align: top;
+}
+
+/* Classes - Float */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Classes - Position */
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* Classes - Margin, Padding % Border */
+
+.mr2 {
+  margin-right: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 0.5rem;
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}
+
+.mb2 {
+  margin-bottom: 2rem;
+}
+
+.mb3 {
+  margin-bottom: 3rem;
+}
+
+.mb4 {
+  margin-bottom: 4rem;
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
+.p3 {
+  padding: 3rem;
+}
+
+.py-5 {
+  padding: 0.5rem 0;
+}
+
+.py5 {
+  padding: 5rem 0;
+}
+
+.py8 {
+  padding: 8rem 0;
+}
+
+.pb3 {
+  padding-bottom: 3rem;
+}
+
+.border {
+  border: var(--base-border);
+}
+
+.border-bottom {
+  border-bottom: var(--base-border);
+}
+
+/* Classes - Height & Width */
+
+.h60 {
+  height: 60rem;
+}
+
+.w20 {
+  width: 20%;
+}
+
+.w25 {
+  width: 25%;
+}
+
+.w33 {
+  width: calc(33% - 1rem - 5px);
+}
+
+.w35 {
+  width: 35%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w55 {
+  width: 55%;
+}
+
+.w65 {
+  width: 65%;
+}
+
+/* Classes - Buttons */
+
+.btn {
+  border: none;
+  padding: 0.5rem 0.9rem;
+  color: white;
+  background-color: var(--blue);
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+header .btn {
+  font-size: 0.8rem;
+}
+
+.btn.dark {
+  border: 1px solid black;
+  color: black;
+  background-color: transparent;
+}
+
+.btn.big-btn {
+  padding: 0.5rem 3rem;
+}
+
+/* Classes - Font & Text */
+
+.text-small {
+  font-size: 0.8rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.big-line-height {
+  line-height: 1.7;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* Classes - Color */
+
+.blue {
+  color: var(--blue);
+}
+
+.black {
+  color: black;
+}
+
+.dark-red {
+  color: #61082b;
+}
+
+/* Classes - Backgrounds */
+
+.bg-grey {
+  background-color: #f5f5f5;
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
+/* Classes - Font Awesome */
+
+.big-icon {
+  font-size: 3rem;
+}
+
+/* Classes - FAQ Section */
+
+.accord-p {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  /* display: none; */
+  transition: opacity 0.5s;
+}
+
+.accord:hover > .accord-p {
+  visibility: visible;
+  height: 100%;
+  opacity: 1;
+  /* display: block; */
+  margin-top: 1rem;
+}
+
+/* Classes - Dropdown */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content ul li {
+  display: block;
+  line-height: 1.3;
+  margin-right: 0;
+  margin-bottom: 1.5rem;
+}
+
+.dropdown-content ul li:last-child {
+  margin-bottom: 0rem;
+}
+
+.dropdown:hover > .dropdown-content,
+.dropdown:hover > .border-top {
+  display: block;
+  border-top: 2px solid var(--blue);
+}
+
+/* ID */
+
+#jumbo {
+  background-color: var(--light-blue);
+  margin-bottom: 6rem;
+}
+
+#btn-sell {
+  right: 2rem;
+  top: 2rem;
+}
+
+#logos-review {
+  min-width: 1000px;
+}
+
+/* ID - Logos */
+
+#designit {
+  background-color: #a2d39b;
+  border: 8px solid #d0e9cd;
+}
+
+#asu {
+  background-color: #61082b;
+}
+
+#uf {
+  background-color: #0093ce;
+}
+
+#topps {
+  background-color: #ff1c1c;
+}
+
+#wbf {
+  background-color: #d5001f;
+}
+
+#hc {
+  background-color: #b4d0e7;
+}
+
+#lp {
+  background-color: #0d2481;
+}
+
+#cco {
+  background-color: #ffd830;
+}

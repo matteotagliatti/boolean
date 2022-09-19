@@ -1,0 +1,29 @@
+body {
+  color: white;
+}
+
+h1 {
+  color: black;
+}
+
+.row {
+  height: 50px;
+}
+
+[class*="col-"] {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #006cfa;
+}
+
+[class*="col-"] > .row {
+  width: 100%;
+  padding: 7px;
+}
+
+[class*="col-"] [class*="col-"] {
+  border: 1px solid #006cfa;
+  background-color: #01e165;
+}

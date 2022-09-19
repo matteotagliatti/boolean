@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Toboolist</title>
+
+    <!-- Import Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">    
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header with Logo + Text Logo -->
+    <header class="bg-white logo-header">
+        <img class="logo" src="img/Logo.png" alt="logo">
+        <h1 class="logo-text">Toboolist</h1>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <section class="bg-white">
+            <!-- Section Header with Buttons -->
+            <header class="section-header container">
+                <button class="bg-blue" id="add-task">Add Task</button>
+                <button id="add-section">Add Section</button>
+            </header>
+
+            <!-- Tasks -->
+            <div class="container pb-40">
+                <!-- New Task -->
+                <h2 class="arrow-down">New Task</h2>
+                <ul>
+                    <li><span class="symbol check">&#10004</span>Quarterly Newsletter<span class="category bg-blue">Editorial</span></li>
+                </ul>
+
+                <!-- Today -->
+                <h2 class="arrow-down">Today</h2>
+                <ul>
+                    <li><span class="symbol check">&#10004</span>Recruit blog post<span class="category bg-blue">Editorial</span></li>
+                    <li><span class="symbol check">&#10004</span>Mobile app launch<span class="category bg-purple">Q1 Goals</span></li>
+                    <li><span class="symbol cross">&#10008</span>Interview John H.<span class="category bg-green">Rectruiting</span></li>
+                    <li><span class="symbol check">&#10004</span>Summit update to mobile storefronts<span class="category bg-yellow">Mobile</span></li>
+                </ul>
+
+                <!-- Upcoming -->
+                <h2 class="arrow-down">Upcoming</h2>
+                <ul>
+                    <li><span class="symbol cross">&#10008</span>Schedule meeting with Alex</li>
+                    <li><span class="symbol check">&#10004</span>Homepage refresh<span class="category bg-pink">Website</span></li>
+                    <li><span class="symbol check">&#10004</span>Onboard new Sales team members<span class="category bg-lightgreen">Sales</span></li>
+                    <li><span class="symbol check">&#10004</span>Review editorial calendar<span class="category bg-blue">Editorial</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

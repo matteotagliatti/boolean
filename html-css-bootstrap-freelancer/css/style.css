@@ -1,0 +1,113 @@
+/* Variables */
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #1abc9c;
+}
+
+/* General */
+
+body {
+  font-family: sans-serif;
+}
+
+footer {
+  padding: 5rem 0;
+  background-color: var(--primary-color);
+}
+
+footer a {
+  color: var(--secondary-color);
+}
+
+footer a:hover {
+  color: white;
+}
+
+button[type="submit"] {
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+/* Classes */
+
+.my-section {
+  padding: 6rem 0;
+}
+
+.my-btn-social {
+  border-radius: 50%;
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Classes - Divider */
+
+.my-divider {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-divider-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+}
+
+.my-divider-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.my-divider .my-divider-line:first-child {
+  margin-right: 1rem;
+}
+
+.my-divider .my-divider-line:last-child {
+  margin-left: 1rem;
+}
+
+/* ID */
+
+#my-nav {
+  padding: 1rem 0;
+  background-color: var(--primary-color);
+}
+
+#my-jumbotron {
+  padding: 8rem 0 4rem 0;
+  background-color: var(--secondary-color);
+}
+
+#my-jumbotron img {
+  width: 15rem;
+}
+
+#my-about {
+  background-color: var(--secondary-color);
+}
+
+#my-bottom-footer {
+  background-color: #1a252f;
+}
+
+/* ID - Divider */
+
+#my-jumbotron .my-divider-line,
+#my-about .my-divider-line {
+  background-color: #fff;
+}
+
+#my-jumbotron .my-divider-icon,
+#my-about .my-divider-icon {
+  color: #fff;
+}

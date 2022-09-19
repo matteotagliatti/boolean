@@ -1,0 +1,98 @@
+/* Variables */
+
+:root {
+    --light-blue: #4ea0ff;
+    --really-light-blue: #b1e5f2;
+}
+
+/* Global */
+
+body {
+    max-width: 1050px;
+}
+
+header {
+    position: relative;
+    height: 150px;
+    background-color: var(--light-blue);
+    background-image: url("../img/pattern.png");
+}
+
+a {
+    color: var(--light-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+thead {
+    background-color:var(--light-blue);
+    color: white;
+    text-align: left;
+}
+
+/* Classes */
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+}
+
+.grey-text {
+    color: grey;
+}
+
+.small-text {
+    font-size: 0.80rem;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.quarter-column {
+    width: 25%;
+}
+
+.tall-row {
+    height: 60px;
+}
+
+.really-light-blue-row {
+    background-color: var(--really-light-blue);
+}
+
+.footer-img {
+    height: 210px;
+    width: 300px;
+    position: relative;
+    background-size: cover;
+}
+
+.footer-img p {
+    position: absolute;
+    left: 20px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* ID */
+
+#bg-monitor-img {
+    background-image: url('../img/monitor.jpg');
+}
+
+#bg-graph-img {
+    background-image: url('../img/graph.jpg');
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array Carousel</title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Official Script -->
+    <script
+      src="https://kit.fontawesome.com/0548baee83.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="min-h-screen flex justify-center items-center">
+      <!-- Carousel -->
+      <div class="flex w-3/4 drop-shadow-lg max-w-4xl">
+        <!-- Left -->
+        <div id="carousel-elements" class="w-full h-96 overflow-hidden"></div>
+        <!-- Right -->
+        <div class="relative w-2/12 h-96 flex flex-col overflow-hidden">
+          <!-- Upper button -->
+          <div
+            id="up-button"
+            class="cursor-pointer z-10 absolute w-8 h-8 top-2 mx-auto left-0 right-0 rounded-full py-1 bg-slate-50 flex justify-center items-center"
+          >
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <!-- Down button -->
+          <div
+            id="down-button"
+            class="cursor-pointer z-10 absolute w-8 h-8 bottom-2 mx-auto left-0 right-0 rounded-full py-1 bg-slate-50 flex justify-center items-center"
+          >
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <!-- Thumbnails -->
+          <div id="thumbnails"></div>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

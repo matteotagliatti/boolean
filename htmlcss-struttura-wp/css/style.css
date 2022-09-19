@@ -1,0 +1,80 @@
+/* Reset */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global */
+
+header {
+  height: 100px;
+  background-color: #e579e6;
+}
+
+footer {
+  height: 50px;
+  background-color: #8801fe;
+}
+
+/* Classes */
+
+.container {
+  max-width: 1000px;
+  min-width: 500px;
+  width: 60%;
+  margin: 20px auto;
+}
+
+.jumbotron {
+  height: 400px;
+  background-color: #e1d67a;
+}
+
+.content {
+  background-color: #0088fc;
+}
+
+.bg-lightblue {
+  background-color: #abcfe7;
+}
+
+.content .header {
+  height: 100px;
+  width: 100%;
+}
+
+.content aside {
+  width: 25%;
+  float: left;
+}
+
+.content .center {
+  width: calc(50% - 24px);
+  float: left;
+}
+
+.h500 {
+  height: 500px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

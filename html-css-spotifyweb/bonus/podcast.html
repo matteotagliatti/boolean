@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML CSS SpotifyWeb</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/podcast.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Nav -->
+      <nav class="flex flex-col justify-bet">
+        <!-- Top Nav -->
+        <div>
+          <!-- Logo -->
+          <div class="container">
+            <img class="logo xs-none" src="img/logo.svg" alt="logo" />
+            <img
+              src="img/logo-small.svg"
+              alt="logo small"
+              class="logo-small only-xs"
+            />
+          </div>
+
+          <!-- Home + Search + Library -->
+          <div class="container no-padding">
+            <ul>
+              <li class="flex align-center active">
+                <img src="img/home.svg" alt="home icon" />
+                <span class="xs-none">Home</span>
+              </li>
+              <li class="flex align-center">
+                <img src="img/search.svg" alt="search icon" />
+                <span class="xs-none">Cerca</span>
+              </li>
+              <li class="flex align-center">
+                <img src="img/libreria.svg" alt="library icon" />
+                <span class="xs-none">La tua libreria</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Playlist -->
+          <div class="container xs-none">
+            <h3>Playlist</h3>
+            <span><button id="create-playlist">+</button> Crea Playlist</span>
+            <ul class="overflow">
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="bottom-nav container no-margin-bottom">
+          <p class="flex align-center">
+            <img
+              id="download-icon"
+              src="img/download.svg"
+              alt="download icon"
+            />
+            <span class="xs-none">Installa App</span>
+          </p>
+          <hr class="xs-none" />
+
+          <p class="flex align-center">
+            <img id="profile-icon" src="img/profile.svg" alt="profile icon" />
+            <span class="xs-none profile-text">John Doe</span>
+          </p>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div id="content">
+        <!-- Upgrade -->
+        <div id="upgrade" class="flex align-center">
+          <a href="#" id="upgrade-btn">Effettua l'upgrade</a>
+        </div>
+
+        <!-- Content Nav -->
+        <div class="container content-nav">
+          <ul class="flex justify-center">
+            <li><a href="index.html">In evidenza</a></li>
+            <li class="flex flex-col align-center active">
+              <a href="podcast.html">Podcast</a>
+            </li>
+            <li>Classifiche</li>
+            <li>Generi e mood</li>
+            <li>Nuove uscite</li>
+            <li>Scopri</li>
+          </ul>
+        </div>
+
+        <!-- Content Podcast -->
+        <div class="container">
+          <!-- Recently Played -->
+          <div>
+            <div class="section-title">
+              <h1>Podcast migliori</h1>
+            </div>
+
+            <div class="flex elements-container">
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/storioes.jpg" alt="stories" />
+                </div>
+                <span class="title">Stories</span>
+                <span class="artist">Chora</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/theessential.jpg" alt="the essential" />
+                </div>
+                <span class="title">The Essential</span>
+                <span class="artist">Will Media</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/ditodidio.jpg" alt="dito di dio" />
+                </div>
+                <span class="title">Il dito di dio</span>
+                <span class="artist">Chora</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/lazanzara.jpg" alt="la zanzara" />
+                </div>
+                <span class="title">La Zanzara</span>
+                <span class="artist">Radio 24</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/earhustle.jpg" alt="ear hustle" />
+                </div>
+                <span class="title">Ear Hustle</span>
+                <span class="artist">Radiotopia</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/stown.jpg" alt="s town" />
+                </div>
+                <span class="title">S-Town</span>
+                <span class="artist">Serial</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Gli utlimi usciti -->
+          <div>
+            <div class="section-title">
+              <h1>Gli ultimi titoli usciti</h1>
+              <span>Più ascoliti, più accurati saranno i suggerimenti</span>
+            </div>
+            <div class="flex elements-container">
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/replyall.jpg" alt="reply all" />
+                </div>
+                <span class="title">Programming note</span>
+                <span class="author">Reply All</span>
+              </div>
+              <!-- Single Element -->
+              <div class="element">
+                <div class="img-container">
+                  <div class="img-overlay">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/balldontlie.png" alt="ball don't lie" />
+                </div>
+                <span class="title">Episode 447</span>
+                <span class="auhtor">Ball Don't Lie</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex justify-bet align-center">
+      <!-- Left -->
+      <div class="flex justify-center align-center footer-left">
+        <div>
+          <img class="play" src="img/player_left.jpg" alt="playing" />
+        </div>
+        <div class="flex flex-col">
+          <span class="title">Sinister</span>
+          <span class="author">Subtitle</span>
+        </div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="far fa-folder"></i>
+        </div>
+      </div>
+      <!-- Middle -->
+      <div class="flex flex-col align-center footer-middle">
+        <div>
+          <i class="fas fa-random"></i>
+          <i class="fas fa-step-backward"></i>
+          <i class="far fa-play-circle big"></i>
+          <i class="fas fa-step-forward"></i>
+          <i class="fas fa-redo-alt"></i>
+        </div>
+        <div class="progress-bar-container flex justify-center align-center">
+          <span>0:25</span>
+          <div class="progress-bar">
+            <div class="inner">
+              <div class="inner-dot"></div>
+            </div>
+          </div>
+          <span>4:45</span>
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="footer-right flex align-center">
+        <div class="icons flex">
+          <i class="fas fa-list"></i>
+          <i class="fas fa-tv"></i>
+          <i class="fas fa-volume-up"></i>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar">
+            <div class="inner">
+              <div class="inner-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

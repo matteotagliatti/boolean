@@ -1,0 +1,162 @@
+/* Variables */
+
+:root {
+    --light-grey: #f6f8f9;
+    --light-blue: #47adf1;
+}
+
+/* Reset */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif; /* Add Roboto Font to every element */
+}
+
+/* Global */
+
+body {
+    background-color: var(--light-grey);
+}
+
+main {
+    width: 70%;
+    margin: 40px auto;
+}
+
+section {
+    border-radius: 10px;
+}
+
+button {
+    padding: 7px 10px;
+    border-radius: 4px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+/* Classi */
+
+.logo-header {
+    padding: 15px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.logo {
+    vertical-align: middle;
+    height: 50px;
+
+}
+
+.logo-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container {
+    padding: 0 50px;
+}
+
+.section-header {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+.arrow-down::before {
+    content: "⯆";
+    font-size: 0.9rem;
+    vertical-align: 4px;
+}
+
+.symbol,
+.category {
+    display: inline-block;
+    text-align: center;
+}
+
+.symbol {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+}
+
+.check {
+    color: green;
+    border: 1px solid green;
+}
+
+.cross {
+    color: red;
+    border: 1px solid red;
+}
+
+.arrow-down::before,
+.symbol {
+    margin-right: 7px;
+}
+
+.category {
+    margin-left: 7px;
+    padding: 7px;
+    width: 70px;
+    height: 28px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+.bg-blue {
+    background-color: var(--light-blue);
+}
+
+.bg-purple {
+    background-color: #9c72e4;
+}
+
+.bg-green {
+    background-color: #64c0a9;
+}
+
+.bg-yellow {
+    background-color: #f29e33;
+}
+
+.bg-pink {
+    background-color: #d863a1;
+}
+
+.bg-lightgreen {
+    background-color: #b0c926;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+/* ID */
+
+#add-task {
+    border: 1px solid var(--light-blue);
+    color: white;
+}
+
+#add-section {
+    background-color: white;
+    border: 1px solid gray;
+    color: gray;
+}
