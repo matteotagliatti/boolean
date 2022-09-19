@@ -1,0 +1,48 @@
+@mixin bg {
+    background-color: rgb(201, 201, 201);
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.train {
+    @include bg;
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transform: translateY(-12px);
+        border-radius: 2rem;
+    }
+}
+
+.train-detail {
+    @include bg;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pagination {
+    nav {
+        ul {
+            display: flex;
+            gap: 2rem;
+
+            li {
+                list-style-type: none;
+                font-size: 2rem;
+                border: 1px solid black;
+                padding: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+
+    div {
+        padding: 1.5rem;
+        background-color: #eee;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        h1,
+        .og-title {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 0.3rem;
+        }
+
+        .og-title {
+            opacity: 0.5;
+        }
+    }
+}
