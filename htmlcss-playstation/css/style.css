@@ -1,0 +1,271 @@
+/* Var */
+
+:root {
+  --blue: #0b5ed7;
+  --default-transition-duration: 0.5s;
+  --default-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  --default-banner-height: 20rem;
+  --default-banner-height-lg: 30rem;
+}
+
+/* General */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  font-family: Helvetica, sans-serif;
+}
+
+nav .navbar-nav li a {
+  color: black !important;
+}
+
+nav .navbar-nav li a:hover {
+  color: #0070d1 !important;
+}
+
+nav .navbar-nav .btn {
+  transition: opacity var(--default-transition-duration);
+}
+
+nav .navbar-nav .btn:hover {
+  opacity: 0.8;
+}
+
+main {
+  margin-top: 7rem;
+}
+
+footer {
+  background-color: #00439c;
+}
+
+footer ul li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+footer ul {
+  margin-bottom: 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Classes - Icon & Btn */
+
+.my-btn {
+  border-radius: 3rem;
+}
+
+.my-icon {
+  height: 1.5rem;
+  transition: opacity var(--default-transition-duration);
+}
+
+.my-icon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Classes - Chevron */
+
+.my-chevron {
+  height: 0.7rem;
+  margin-left: 0.2rem;
+}
+
+.my-chevron.hover {
+  display: none;
+}
+
+.nav-link:hover .my-chevron.hover {
+  display: inline-block;
+}
+
+.nav-link:hover .my-chevron.none {
+  display: none;
+}
+
+/* Classes - Banner */
+
+.my-banner {
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.my-banner img.logo {
+  width: 50%;
+}
+
+.my-banner img.big-logo {
+  height: 15rem;
+}
+
+.my-banner .my-btn {
+  color: white;
+  background-color: #cd3d0f;
+}
+
+/* ID */
+
+#jumbo {
+  height: 35rem;
+  background-image: url("../img/jumbo-bg.png");
+}
+
+#banner {
+  background-image: url("../img/it-takes-two-hero-banner-desktop.jpg");
+}
+
+#header-top {
+  background-color: black;
+}
+
+#header-top img {
+  height: 1rem;
+}
+
+#header-bottom {
+  background-color: white;
+}
+
+#suggested img {
+  border-radius: 15px;
+  transition: all var(--default-transition-duration);
+}
+
+#suggested img:hover {
+  outline: 3px solid var(--blue);
+  padding: 2px;
+  transform: translateY(-8px);
+  opacity: 0.8;
+  box-shadow: var(--default-box-shadow);
+}
+
+#playstation5 span {
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#accessories div {
+  opacity: 0.6;
+  transition: opacity var(--default-transition-duration);
+}
+
+#accessories div:hover {
+  border-bottom: 2px solid var(--blue);
+  opacity: 1;
+}
+
+#accessories img {
+  width: 60%;
+}
+
+#new-releases {
+  background-color: #1f1f1f;
+}
+
+#new-releases img:hover {
+  transition: all var(--default-transition-duration);
+}
+
+#new-releases img:hover {
+  transform: scale(1.02);
+}
+
+#ps-store img {
+  transition: all var(--default-transition-duration);
+}
+
+#ps-store img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--default-box-shadow);
+}
+
+#ps-plus {
+  background-color: #bebcbb;
+}
+
+#ps-plus .btn {
+  color: var(--blue);
+  background-color: #d9dadc;
+}
+
+#ps-now {
+  background-color: #161c3b;
+}
+
+#ps-now .btn {
+  color: black;
+  background-color: white;
+}
+
+#ps-plus,
+#ps-now {
+  height: var(--default-banner-height);
+}
+
+#ps-plus img,
+#ps-now img {
+  height: var(--default-banner-height);
+  right: 0;
+}
+
+#ps-plus .my-h,
+#ps-now .my-h {
+  height: var(--default-banner-height);
+}
+
+#ps-plus .btn,
+#ps-now .btn {
+  width: 15rem;
+}
+
+#ps-plus img.logo,
+#ps-now img.logo {
+  height: unset;
+  width: 20rem;
+}
+
+#social-media img {
+  transition: all var(--default-transition-duration);
+}
+
+#social-media img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--default-box-shadow);
+}
+
+#bottom-footer img {
+  height: 50px;
+}
+
+/* LG Breakpoint */
+
+@media (min-width: 992px) {
+  #ps-plus,
+  #ps-now {
+    height: var(--default-banner-height-lg);
+  }
+
+  #ps-plus img,
+  #ps-now img {
+    height: var(--default-banner-height-lg);
+    right: 0;
+  }
+
+  #ps-plus .my-h,
+  #ps-now .my-h {
+    height: var(--default-banner-height-lg);
+  }
+}
